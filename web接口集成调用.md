@@ -2,7 +2,7 @@
 
 **框架引用**
 > 1.webappdemo引用地址<br>
-> * git：xxxxxxxxxxxxxxxxxxx<br>
+> * git：https://github.com/xavier0509/newWebappdemo.git<br>
 > * 将该目录下的所有文件复制到工作目录下（开发仅仅是对index.html页面以及相对应的css和js进行更改）
 
 > 2.重写html页面以及js脚本
