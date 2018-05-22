@@ -436,5 +436,69 @@ Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
     <td>   </td>
     <td>   </td>
   </tr>
+  
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.notifyJSLogResumeInfo(eventId,ddata,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td> 用于活动中心的曝光事件，可采集时长，与notifyJSLogPauseInfo成对出现</td>
+    <td> eventId日志项名称、ddata拓展参数</td>
+    <td>   </td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.notifyJSLogPauseInfo(eventId,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td> 用于活动中心的曝光事件，可采集时长，与notifyJSLogResumeInfo成对出现  </td>
+    <td> 只有 eventId日志项名称 </td>
+    <td>   </td>
+  </tr>
+  
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.hasApk(pkgname,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td> 检测是否装有apk</td>
+    <td> pkgname为应用包名</td>
+    <td>   </td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.getAppInfo(packageList,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td> 获取app相关信息  </td>
+    <td> 参数传递一个对象，key为"pkgList",value为应用包名的数组。即{pkgList:["com.tianci.user","com.tianci.movieplatform"]} </td>
+    <td>   </td>
+  </tr>
+  
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.getBaseInfo(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td> 获取基础信息(内存、存储空间等)</td>
+    <td></td>
+    <td></td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.setBusinessData(cc_type,cc_data,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td> 设置Business相关信息  </td>
+    <td> cc_type区分同步、异步。默认为异步（async）,只有传sync时才会更改;cc_data为json形式的字符串 </td>
+    <td> 如 需要得到返回结果，采用getBusinessData</td>
+  </tr>
+  
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.getBusinessData(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td> 获取Business相关信息</td>
+    <td>cc_type区分同步、异步。默认为异步（async）,只有传sync时才会更改;cc_data为json形式的字符串</td>
+    <td></td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.setCoocaaUserLogout(function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td> 退出用户登录状态  </td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startParamAction(pkname,version,activity,action,param,str,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td> 启动传参action页面</td>
+    <td>包名、版本号、startActivity、action、action名、拓展参数[{key1:"value1"},{key2:"value2"}]</td>
+    <td></td>
+ </tr>
+  
   </table>
   
