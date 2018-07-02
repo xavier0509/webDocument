@@ -12,9 +12,10 @@
 > *  在此之前的函数可归结为事件的监听加载过程，针对返回、主页键等进行自定义处理<br>
 （receivedEvent: function(id)的内容根据需求进行增减）<br>
 
-> 在完成页面开发之后，先自行在本地服务器上进行测试，代码上传到服务器上，在电视上通过CordovaTest.apk进行测试。在确认没有问题之后，发出邮件给运维人员进行正式环境(http://webapp.skysrt.com) 的部署。
+> 在完成页面开发之后，先自行在本地服务器上进行测试，代码上传到服务器上，在电视上通过CordovaTest.apk进行测试。在确认没有问题之后，发出邮件给运维人员进行正式环境(https://webapp.skysrt.com) 的部署。
 
 - **接口调用方法【建议在酷开5.5（含）以上的版本使用】**
+- **系统启动、获取信息类**
 <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -23,116 +24,173 @@
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startLocalMedia(function(message) {console.log(message); },function(error) {console.log(error);}); </td>
+    <td bgcolor=#eeeeee> coocaaosapi.startLocalMedia </td>
     <td> 启动本地媒体  </td>
-    <td>   </td>
+    <td>  无 </td>
     <td>  打开本地媒体界面 4.x的版本不支持</td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startTVSetting(function(message)  {console.log(message); },function(error){console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startTVSetting </td>
     <td> 启动电视设置 </td>
-    <td>   </td>
+    <td>  无 </td>
     <td> 打开电视设置界面  4.x的版本不支持</td>
  </tr>
- 
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startSourceList( function(message){console.log(message);},function(error){console.log(error); });</td>
+    <td bgcolor=#eeeeee> coocaaosapi.startSourceList</td>
     <td> 启动信号源  </td>
-    <td>   </td>
+    <td>  无 </td>
     <td>  打开信号源选择界面 4.x的版本不支持</td>
   </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMovieHistory(function(message) {console.log(message); },function(error) { console.log(error);}) </td>
-    <td> 启动影视历史 </td>
-    <td>   </td>
-    <td> 打开影视历史界面  4.x的版本不支持</td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMyGames(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动我的游戏  </td>
-    <td>   </td>
-    <td>  打开我的游戏界面 4.x的版本不支持</td>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMyApps(mode,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动我的应用 </td>
-    <td> mode: child / 其他，代表启动的是哪个模式下的程序  </td>
-    <td> 启动我的应用界面 4.x的版本不支持 </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startUserSetting(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+   <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startUserSetting </td>
     <td> 启动账户中心  </td>
-    <td>   </td>
+    <td>  无 </td>
     <td>  启动用户账户中心 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startNetSetting(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startNetSetting </td>
     <td> 启动网络设置 </td>
     <td>   </td>
     <td> 打开网络设置界面  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startBlueToothSetting(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#eeeeee> coocaaosapi.startBlueToothSetting </td>
     <td> 启动蓝牙设置  </td>
     <td>   </td>
     <td>  打开蓝牙设置界面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMessageBox(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startMessageBox </td>
     <td> 启动消息盒子 </td>
     <td>   </td>
     <td> 酷开5.5版本以上才具有消息盒子功能  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startSystemUpgrade(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#eeeeee> coocaaosapi.startSystemUpgrade </td>
     <td> 启动系统升级  </td>
     <td>   </td>
     <td>  打开系统的升级页面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.getDeviceLocation(function(message) {},function(error) { console.log(error);}) </td>
+    <td bgcolor=#00FF00> coocaaosapi.getDeviceLocation </td>
     <td> 获取定位信息 </td>
     <td>   </td>
     <td> 设备定位信息的json串  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.getUserAccessToken(function(message) {},function(error) { console.log(error);}) </td>
+    <td bgcolor=#eeeeee> coocaaosapi.getUserAccessToken</td>
     <td> 获取accesstoken  </td>
     <td>   </td>
     <td>  用户的token值 登录前提下才有token </td>
   </tr>
   
   <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.getDeviceInfo(function(message) {             },function(error) { console.log(error);})</td>
+    <td bgcolor=#eeeeee> coocaaosapi.getDeviceInfo</td>
     <td> 获取设备信息  </td>
     <td>   </td>
     <td> 含有屏幕尺寸（panel）、机芯（chip）、机型（model）、mac地址、安卓版本（androidsdk）、酷开版本（version）、激活id（activeid）、电视id（devid）、chipid等信息的json串 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.isNetConnected(function(message){  },function(error) { console.log(error);}) </td>
+    <td bgcolor=#00FF00> coocaaosapi.isNetConnected </td>
     <td> 获取网络连接状态 </td>
     <td>   </td>
     <td> true（联网状态）/false（无网络状态）  </td>
  </tr>
  
   <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.hasCoocaaUserLogin(function(message) {          },function(error) { console.log(error);}) </td>
+    <td bgcolor=#eeeeee> coocaaosapi.hasCoocaaUserLogin </td>
     <td> 用户是否登录  </td>
     <td>   </td>
     <td>  true：已经登录        false：未登录 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.getUserInfo(function(message) { },function(error) { console.log(error);}) </td>
+    <td bgcolor=#00FF00> coocaaosapi.getUserInfo</td>
     <td> 获取用户信息 </td>
     <td>   </td>
     <td> 当前用户的信息json串  </td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.setCoocaaUserLogout</td>
+    <td> 退出登录 </td>
+    <td>   </td>
+    <td> 退出当前登录账户  </td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.getBaseInfo</td>
+    <td> 获取设备baseinfo </td>
+    <td>   </td>
+    <td> 获取baseinfo，包括内存信息、存储信息  </td>
+  </tr>
+  </table>
+
+
+   **影视、主页相关**
+  <table>
+  <tr>
+    <th width=40%, bgcolor=yellow >调用方法</th>
+    <th width=10%, bgcolor=yellow>功能说明</th>
+    <th width=30%, bgcolor=yellow>所需参数</th>
+    <th width="20%", bgcolor=yellow>结果/备注</th>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startMovieHistory</td>
+    <td> 启动影视历史 </td>
+    <td>   </td>
+    <td> 打开影视历史界面  4.x的版本不支持</td>
+ </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startMovieList</td>
+    <td> id跳转影视列表  </td>
+    <td>  参数listid为输入/获取到的影视id </td>
+    <td> 跳转打开该id的影视列表  </td>
+ </tr>
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startMovieDetail </td>
+    <td> id跳转影视详情   </td>
+    <td> 参数detailid为输入/获取到的影视详情id  </td>
+    <td>  跳转打开该id的影视详情 </td>
+  </tr>
  
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startMovieMemberCenter</td>
+    <td> 启动影视会员中心  </td>
+    <td>   </td>
+    <td>  启动打开影视会员中心 </td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startMovieHome</td>
+    <td> 启动影视主页 </td>
+    <td>   </td>
+    <td> 打开影视主页面  </td>
+ </tr>
  
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startMovieTopic</td>
+    <td>  id启动影视专题页  </td>
+    <td>  参数topicid为输入/获取到的影视专题的id </td>
+    <td>  跳转打开该id对应的影视专题页 </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startMyCoupon</td>
+    <td>  启动我的优惠券列表  </td>
+    <td>  参数：sign--约定的业务线对应sign值/openId--用户的openid/appId--对应业务的appid值/businessLine--movie、education、allMovie/business_type--0、1、-1</td>
+    <td>  启动我的优惠券 </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAllCoupon</td>
+    <td>  启动优惠券列表  </td>
+    <td>  参数：sign--约定的业务线对应sign值/openId--用户的openid/appId--对应业务的appid值/businessLine--movie、education、allMovie/business_type--0、1、-1</td>
+    <td>  启动优惠券 </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startHomeTap</td>
+    <td>  跳转主页指定tab  </td>
+    <td>  参数：actionName为需要启动的action名【此方法涉及3个不同action】/tabid为指定tab的id值</td>
+    <td>  6.x系统actionName为“coocaa.intent.action.HOME”，5.x系统先判断一下persist.service.homepage.pkg这个prop，如果值是com.tianci.movieplatform，那么action是coocaa.intent.action.HOME.Translucent  否则 action就是coocaa.intent.movie.home</td>
+  </tr>
   </table>
   
   
@@ -216,47 +274,7 @@ function(error) { console.log(error);});</td>
  </tr>
  </table>
  
- **影视相关**
-  <table>
-  <tr>
-    <th width=40%, bgcolor=yellow >调用方法</th>
-    <th width=10%, bgcolor=yellow>功能说明</th>
-    <th width=30%, bgcolor=yellow>所需参数</th>
-    <th width="20%", bgcolor=yellow>结果/备注</th>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMovieList(listid,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> id跳转影视列表	 </td>
-    <td>  参数listid为输入/获取到的影视id </td>
-    <td> 跳转打开该id的影视列表  </td>
- </tr>
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMovieDetail(detailid,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> id跳转影视详情	  </td>
-    <td> 参数detailid为输入/获取到的影视详情id  </td>
-    <td>  跳转打开该id的影视详情 </td>
-  </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMovieMemberCenter(function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动影视会员中心  </td>
-    <td>   </td>
-    <td>  启动打开影视会员中心 </td>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMovieHome(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动影视主页 </td>
-    <td>   </td>
-    <td> 打开影视主页面  </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMovieTopic(topicid,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 参数topicid为输入/获取到的影视专题的id	  </td>
-    <td>   </td>
-    <td>  跳转打开该id对应的影视专题页 </td>
-  </tr>
-  </table>
+
   
   
    **监听调用**
