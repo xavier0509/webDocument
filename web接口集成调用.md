@@ -55,7 +55,6 @@
     <td>   </td>
     <td> 打开网络设置界面  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startBlueToothSetting </td>
     <td> 启动蓝牙设置  </td>
@@ -68,7 +67,6 @@
     <td>   </td>
     <td> 酷开5.5版本以上才具有消息盒子功能  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startSystemUpgrade </td>
     <td> 启动系统升级  </td>
@@ -81,14 +79,12 @@
     <td>   </td>
     <td> 设备定位信息的json串  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.getUserAccessToken</td>
     <td> 获取accesstoken  </td>
     <td>   </td>
     <td>  用户的token值 登录前提下才有token </td>
   </tr>
-  
   <tr>
     <td bgcolor=#eeeeee> coocaaosapi.getDeviceInfo</td>
     <td> 获取设备信息  </td>
@@ -101,7 +97,6 @@
     <td>   </td>
     <td> true（联网状态）/false（无网络状态）  </td>
  </tr>
- 
   <tr>
     <td bgcolor=#eeeeee> coocaaosapi.hasCoocaaUserLogin </td>
     <td> 用户是否登录  </td>
@@ -155,7 +150,6 @@
     <td> 参数detailid为输入/获取到的影视详情id  </td>
     <td>  跳转打开该id的影视详情 </td>
   </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startMovieMemberCenter </td>
     <td> 启动影视会员中心  </td>
@@ -168,7 +162,6 @@
     <td>   </td>
     <td> 打开影视主页面  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startMovieTopic</td>
     <td>  id启动影视专题页  </td>
@@ -196,7 +189,7 @@
   </table>
   
   
-  **应用圈相关**
+  **应用圈、商城相关**
   <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -234,7 +227,6 @@
     <td> sortid为输入/获取到的应用圈分类id  </td>
     <td> 跳转到该id对应的应用圈分类页面  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startAppStoreList</td>
     <td> id跳转应用圈列表  </td>
@@ -247,7 +239,6 @@
     <td>  detailid为输入/获取到的应用圈详情id </td>
     <td> 跳转到该id对应的应用圈详情页面  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startAppStoreZone</td>
     <td> id跳转应用圈专题  </td>
@@ -265,7 +256,6 @@
 6.icon图片地址 </td>
     <td> 打开或者在应用圈中进行下载  </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startGameCenter</td>
     <td> 启动酷游吧  </td>
@@ -290,7 +280,6 @@
     <td>  gamedetailid为详情页id </td>
     <td> 打开游戏详情页  </td>
  </tr>
-
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startAppShop</td>
     <td> 启动酷开商城首页  </td>
@@ -303,7 +292,6 @@
     <td> 参数id为输入/获取到的商城列表id   title为列表页title </td>
     <td> 启动商城列表页  </td>
   </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startAppShopDetail</td>
     <td> 启动购物图文详情页  </td>
@@ -316,7 +304,6 @@
     <td>   专题页id</td>
     <td>   </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startAppShopZoneList</td>
     <td> 启动酷开商城专题列表页    </td>
@@ -329,7 +316,6 @@
     <td>   视频页id，url，名称</td>
     <td>   </td>
  </tr>
- 
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.startAppShopBUYING</td>
     <td> 启动购物酷开商城活动列表页    </td>
@@ -341,7 +327,7 @@
 
   
   
-   **监听调用**
+   **监听**
   <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -373,7 +359,6 @@
     <td>   </td>
     <td>   </td>
   </tr>
- 
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.addUSBChangedListener</td>
     <td> USB状态监听	 </td>
@@ -430,9 +415,9 @@
    **业务相关**
   <table>
   <tr>
-    <th width=40%, bgcolor=yellow >调用方法</th>
-    <th width=10%, bgcolor=yellow>功能说明</th>
-    <th width=30%, bgcolor=yellow>所需参数</th>
+    <th width=35%, bgcolor=yellow >调用方法</th>
+    <th width=8%, bgcolor=yellow>功能说明</th>
+    <th width=28%, bgcolor=yellow>所需参数</th>
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
@@ -504,6 +489,48 @@ Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
     <td> 启动传参action页面</td>
     <td>包名、版本号、startActivity、action、action名、拓展参数[{key1:"value1"},{key2:"value2"}]</td>
     <td></td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startNewBrowser</td>
+    <td> 新版本浏览器【无路径】 </td>
+    <td>   新页面url /td>
+    <td>  无路径是指不会新开activity，相当于同一浏览页面 / 还可采用不透明方式</td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startNewBrowser2</td>
+    <td> 新版本浏览器【有路径】 </td>
+    <td>   新页面url /td>
+    <td>  有路径是指新开activity，相当于多个浏览页面 / 还可采用不透明方式</td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> 不同的启动方式，以下为4个例子，使用时随需求修改</td>
+    <td>  </td>
+    <td>    /td>
+    <td>  </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish </td>
+    <td> action方式启动 </td>
+    <td>    /td>
+    <td> action启动 </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish2</td>
+    <td> 包名类名方式启动 </td>
+    <td>    /td>
+    <td> 包名类名方式启动 </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish3</td>
+    <td> 包名+action方式启动 </td>
+    <td>    /td>
+    <td> 第一个数组参数的第一个元素为“action” </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish4</td>
+    <td> 包名方式启动 </td>
+    <td>    /td>
+    <td>  </td>
  </tr>
   
   </table>
