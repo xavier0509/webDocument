@@ -229,7 +229,7 @@
     <td>  跳转打开应用圈榜单页面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppStoreSort(sortid,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startAppStoreSort </td>
     <td> id跳转应用圈分类	 </td>
     <td> sortid为输入/获取到的应用圈分类id  </td>
     <td> 跳转到该id对应的应用圈分类页面  </td>
