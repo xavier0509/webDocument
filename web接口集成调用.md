@@ -500,7 +500,7 @@ Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
  </tr>
  
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startParamAction(pkname,version,activity,action,param,str,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startParamAction</td>
     <td> 启动传参action页面</td>
     <td>包名、版本号、startActivity、action、action名、拓展参数[{key1:"value1"},{key2:"value2"}]</td>
     <td></td>
