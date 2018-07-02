@@ -15,7 +15,9 @@
 > 在完成页面开发之后，先自行在本地服务器上进行测试，代码上传到服务器上，在电视上通过CordovaTest.apk进行测试。在确认没有问题之后，发出邮件给运维人员进行正式环境(https://webapp.skysrt.com) 的部署。
 
 - **接口调用方法【建议在酷开5.5（含）以上的版本使用】**
-- **系统启动、获取信息类**
+
+
+**系统启动、获取信息类**
 <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -203,15 +205,27 @@
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppStore(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startAppStore</td>
     <td> 启动应用圈	 </td>
     <td>   </td>
     <td> 打开应用圈  </td>
  </tr>
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreBD(1,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动应用圈榜单	  </td>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startMyGames</td>
+    <td> 启动我的游戏  </td>
     <td>   </td>
+    <td>  打开我的游戏界面 4.x的版本不支持</td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startMyApps</td>
+    <td> 启动我的应用 </td>
+    <td> mode: child / 其他，代表启动的是哪个模式下的程序  </td>
+    <td> 启动我的应用界面 4.x的版本不支持 </td>
+ </tr>
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreBD</td>
+    <td> 启动应用圈榜单	  </td>
+    <td>  rankId为榜单id </td>
     <td>  跳转打开应用圈榜单页面 </td>
   </tr>
   <tr>
@@ -222,56 +236,106 @@
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreList(listid,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreList</td>
     <td> id跳转应用圈列表  </td>
     <td>  参数listid为输入/获取到的应用圈列表id </td>
     <td>  跳转到该id对应的应用圈列表 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppStoreDetail(detailid,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.startAppStoreDetail</td>
     <td> id跳转应用圈详情 </td>
     <td>  detailid为输入/获取到的应用圈详情id </td>
     <td> 跳转到该id对应的应用圈详情页面  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreZone(zoneid,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppStoreZone</td>
     <td> id跳转应用圈专题  </td>
     <td>  zoneid为输入/获取到的应用圈专题id </td>
     <td>  跳转到该id对应的应用圈专题页面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startOrCreateDownloadTask(                           
-  "https://qd.myapp.com/myapp/qqteam/AndroidQQ/mobileqq_android.apk",
-  '',
-  'qq移动版',
-  'com.tencent.mobileqq',
-  '123123', 
-  'http://img.zcool.cn/community/01559e565d84d832f875964706920d.png',
-function(message) {console.log(message); },
-function(error) { console.log(error);});</td>
-    <td> 下载一个任务 </td>
+    <td bgcolor=#00FF00> coocaaosapi.startOrCreateDownloadTask</td>
+    <td> 跳转或下载一个任务 </td>
     <td>  1.下载路径
 2.MD5校验值
 3.下载文件名称
 4.下载的包名
 5.appid
 6.icon图片地址 </td>
-    <td> 在应用圈中进行下载  </td>
+    <td> 打开或者在应用圈中进行下载  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startGameCenter(function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.startGameCenter</td>
     <td> 启动酷游吧  </td>
     <td>   </td>
     <td>  打开酷游吧界面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startGameArsenal(function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#00FF00> coocaaosapi.startGameArsenal</td>
     <td> 启动游戏军火库 </td>
     <td>   </td>
     <td> 打开酷游吧游戏军火库页面  </td>
  </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startGameCenterList</td>
+    <td> 启动游戏列表页 </td>
+    <td>  gamelistid为游戏列表页id / gametitleid为列表页title</td>
+    <td> 打开游戏列表页  </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startGameCenterDetail</td>
+    <td> 启动游戏详情页 </td>
+    <td>  gamedetailid为详情页id </td>
+    <td> 打开游戏详情页  </td>
+ </tr>
+
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startAppShop</td>
+    <td> 启动酷开商城首页  </td>
+    <td>  </td>
+    <td>   </td>
+ </tr>
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppShopList</td>
+    <td> 启动酷开商城列表页    </td>
+    <td> 参数id为输入/获取到的商城列表id   title为列表页title </td>
+    <td> 启动商城列表页  </td>
+  </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppShopDetail</td>
+    <td> 启动购物图文详情页  </td>
+    <td>  id为图文详情页id </td>
+    <td>   </td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startAppShopZone</td>
+    <td> 启动酷开商城专题页 </td>
+    <td>   专题页id</td>
+    <td>   </td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppShopZoneList</td>
+    <td> 启动酷开商城专题列表页    </td>
+    <td>   </td>
+    <td>   </td>
+  </tr>
+  <tr>
+    <td bgcolor=#00FF00> coocaaosapi.startAppShopVideo</td>
+    <td> 启动酷开商城视频详情页 </td>
+    <td>   视频页id，url，名称</td>
+    <td>   </td>
+ </tr>
+ 
+ <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.startAppShopBUYING</td>
+    <td> 启动购物酷开商城活动列表页    </td>
+    <td> 活动列表页id  </td>
+    <td>   </td>
+  </tr>
  </table>
  
 
