@@ -196,7 +196,7 @@
   </table>
   
   
-  **应用圈相关**
+  **应用圈、商城相关**
   <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -387,64 +387,6 @@
     <td>   </td>
   </tr>
   </table>
-  
-  
-  
-   **商城相关**
-  <table>
-  <tr>
-    <th width=40%, bgcolor=yellow >调用方法</th>
-    <th width=10%, bgcolor=yellow>功能说明</th>
-    <th width=30%, bgcolor=yellow>所需参数</th>
-    <th width="20%", bgcolor=yellow>结果/备注</th>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppShop(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动酷开商城首页	 </td>
-    <td>  </td>
-    <td>   </td>
- </tr>
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppShopList(detailid,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动酷开商城列表页	  </td>
-    <td> 参数detailid为输入/获取到的商城列表id  </td>
-    <td>   </td>
-  </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppShopDetail(id,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动购物图文详情页  </td>
-    <td>  id为图文详情页id </td>
-    <td>   </td>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppShopZone(id,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动酷开商城专题页 </td>
-    <td>   专题页id</td>
-    <td>   </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppShopZoneList(function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动酷开商城专题列表页	  </td>
-    <td>   </td>
-    <td>   </td>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppShopVideo(id,url,name,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动酷开商城视频详情页 </td>
-    <td>   视频页id，url，名称</td>
-    <td>   </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startAppShopBUYING(id,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动购物酷开商城活动列表页	  </td>
-    <td> 活动列表页id  </td>
-    <td>   </td>
-  </tr>
-  </table>
-  
   
   
    **其他【新增】**
