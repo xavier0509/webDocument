@@ -490,46 +490,46 @@ Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
     <td>包名、版本号、startActivity、action、action名、拓展参数[{key1:"value1"},{key2:"value2"}]</td>
     <td></td>
  </tr>
- <tr>
+  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startNewBrowser</td>
     <td> 新版本浏览器【无路径】 </td>
-    <td>   新页面url /td>
+    <td>   新页面url </td>
     <td>  无路径是指不会新开activity，相当于同一浏览页面 / 还可采用不透明方式</td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startNewBrowser2</td>
     <td> 新版本浏览器【有路径】 </td>
-    <td>   新页面url /td>
+    <td>   新页面url </td>
     <td>  有路径是指新开activity，相当于多个浏览页面 / 还可采用不透明方式</td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> 不同的启动方式，以下为4个例子，使用时随需求修改</td>
     <td>  </td>
-    <td>    /td>
+    <td>    </td>
     <td>  </td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish </td>
     <td> action方式启动 </td>
-    <td>    /td>
+    <td>    </td>
     <td> action启动 </td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish2</td>
     <td> 包名类名方式启动 </td>
-    <td>    /td>
+    <td>    </td>
     <td> 包名类名方式启动 </td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish3</td>
     <td> 包名+action方式启动 </td>
-    <td>    /td>
+    <td>    </td>
     <td> 第一个数组参数的第一个元素为“action” </td>
  </tr>
  <tr>
     <td bgcolor=#00FF00> coocaaosapi.startUserSettingAndFinish4</td>
     <td> 包名方式启动 </td>
-    <td>    /td>
+    <td>    </td>
     <td>  </td>
  </tr>
   
