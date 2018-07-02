@@ -132,19 +132,19 @@
    **影视、主页相关**
   <table>
   <tr>
-    <th width=40%, bgcolor=yellow >调用方法</th>
-    <th width=10%, bgcolor=yellow>功能说明</th>
-    <th width=30%, bgcolor=yellow>所需参数</th>
+    <th width=40% bgcolor=yellow >调用方法</th>
+    <th width=10% bgcolor=yellow>功能说明</th>
+    <th width=30% bgcolor=yellow>所需参数</th>
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMovieHistory</td>
-    <td> 启动影视历史 </td>
-    <td>   </td>
-    <td> 打开影视历史界面  4.x的版本不支持</td>
+    <td bgcolor=#00FF00> coocaaosapi.startMovieHistory </td>
+    <td>  启动影视历史  </td>
+    <td>  无 </td>
+    <td> 打开影视历史界面4.x的版本不支持</td>
  </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startMovieList</td>
+    <td bgcolor=#00FF00> coocaaosapi.startMovieList </td>
     <td> id跳转影视列表  </td>
     <td>  参数listid为输入/获取到的影视id </td>
     <td> 跳转打开该id的影视列表  </td>
@@ -157,7 +157,7 @@
   </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMovieMemberCenter</td>
+    <td bgcolor=#eeeeee> coocaaosapi.startMovieMemberCenter </td>
     <td> 启动影视会员中心  </td>
     <td>   </td>
     <td>  启动打开影视会员中心 </td>
@@ -196,7 +196,7 @@
   </table>
   
   
-  **应用圈、商城相关**
+  **应用圈相关**
   <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -351,13 +351,25 @@
   </tr>
   <tr>
     <td bgcolor=#00FF00> coocaaosapi.addPurchaseOrderListener</td>
-    <td> 支付状态监听	 </td>
+    <td> 支付状态监听  </td>
+    <td> </td>
+    <td>  在回调函数中处理监听事件 </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.removePurchaseOrderListener</td>
+    <td> 移除支付状态监听  </td>
     <td> </td>
     <td>   </td>
  </tr>
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.addUserChanggedListener</td>
     <td> 账户状态变更监听	  </td>
+    <td>   </td>
+    <td>  在回调函数中处理监听事件 </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.removeUserChanggedListener</td>
+    <td> 移除账户状态变更监听   </td>
     <td>   </td>
     <td>   </td>
   </tr>
@@ -366,16 +378,35 @@
     <td bgcolor=#00FF00> coocaaosapi.addUSBChangedListener</td>
     <td> USB状态监听	 </td>
     <td> </td>
+    <td> 在回调函数中处理监听事件  </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.removeUSBChangedListener</td>
+    <td> 移除USB状态监听【u盘】  </td>
+    <td> </td>
     <td>   </td>
  </tr>
  <tr>
     <td bgcolor=#eeeeee> coocaaosapi.addNetChangedListener</td>
     <td> 网络状态变更监听	  </td>
     <td>   </td>
+    <td> 在回调函数中处理监听事件  </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.removeNetChangedListener</td>
+    <td> 移除网络状态变更监听   </td>
     <td>   </td>
-  </tr><tr>
+    <td>   </td>
+  </tr>
+  <tr>
     <td bgcolor=#00FF00> coocaaosapi.addAppTaskListener</td>
     <td> APK下载监听	 </td>
+    <td> </td>
+    <td> 在回调函数中处理监听事件  </td>
+ </tr>
+ <tr>
+    <td bgcolor=#00FF00> coocaaosapi.removeAppTaskListener</td>
+    <td> 移除APK下载监听   </td>
     <td> </td>
     <td>   </td>
  </tr>
@@ -384,12 +415,19 @@
         }) </td>
     <td> 通用监听【新浏览器】	  </td>
     <td>   </td>
+    <td> 在回调函数中处理监听事件  </td>
+  </tr>
+  <tr>
+    <td bgcolor=#eeeeee> coocaaosapi.removeCommonListener;
+        }) </td>
+    <td> 移除通用监听【新浏览器】   </td>
+    <td>   </td>
     <td>   </td>
   </tr>
   </table>
   
   
-   **其他【新增】**
+   **业务相关**
   <table>
   <tr>
     <th width=40%, bgcolor=yellow >调用方法</th>
@@ -398,15 +436,13 @@
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.notifyJSMessage(webInfoStr,function(message)
-{  },function(error) { console.log(error);})</td>
+    <td bgcolor=#00FF00> coocaaosapi.notifyJSMessage</td>
     <td> Web页面消息上传	 </td>
-    <td>webInfoStr为字符串  </td>
+    <td> webInfoStr为字符串  </td>
     <td>   </td>
  </tr>
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.notifyJSLogInfo(eventId,ddata,function(message)
-{  },function(error) { console.log(error);})</td>
+    <td bgcolor=#eeeeee> coocaaosapi.notifyJSLogInfo</td>
     <td> Web日志提交上传	  </td>
     <td> eventId为字符串，是日志项名称
 Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
@@ -414,108 +450,55 @@ Ddata是json形式的字符串。允许为空，但必须传”{}”  </td>
   </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.getPropertiesValue(data,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.getPropertiesValue</td>
     <td> 获取属性  </td>
-    <td>  propertiesKey的属性名 </td>
+    <td>  参数为propertiesKey的属性名 </td>
     <td>   </td>
   </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.getSpaceInfo(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 获取space </td>
-    <td>   </td>
-    <td>   获取设备的空间 </td>
- </tr>
- 
+
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startMyCoupon(sign,openId,appId,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动我的优惠券	  </td>
-    <td>  不同业务线有固定的sign和appid </td>
-    <td>   </td>
-  </tr>
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppShopVideo(id,url,name,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动酷开商城视频详情页 </td>
-    <td>   视频页id，url，名称</td>
-    <td>   </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startCommonWebview(id,uri,tips,height,width,call_url,type,name,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动web播放器	  </td>
-    <td>   </td>
+    <td bgcolor=#eeeeee> coocaaosapi.startCommonWebview</td>
+    <td> 启动web播放器 </td>
+    <td>  视频id,视频uri,悬浮框tips,播放器高height,播放器宽width,广告曝光第三方的call_url,视频类型type,视频name, </td>
     <td>   </td>
   </tr>
   
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startNewBrowser(url,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 启动新版本浏览器 </td>
-    <td>   视频页id，url，名称</td>
-    <td>   </td>
- </tr>
- 
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.startCommonWebview(id,uri,tips,height,width,call_url,type,name,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 启动web播放器	  </td>
-    <td>   </td>
-    <td>   </td>
-  </tr>
   
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.notifyJSLogResumeInfo(eventId,ddata,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
+    <td bgcolor=#00FF00> coocaaosapi.notifyJSLogResumeInfo</td>
     <td> 用于活动中心的曝光事件，可采集时长，与notifyJSLogPauseInfo成对出现</td>
     <td> eventId日志项名称、ddata拓展参数</td>
-    <td>   </td>
+    <td> 此方式为非实时提交，可能会有丢失，建议仅作参考  </td>
  </tr>
  
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.notifyJSLogPauseInfo(eventId,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.notifyJSLogPauseInfo</td>
     <td> 用于活动中心的曝光事件，可采集时长，与notifyJSLogResumeInfo成对出现  </td>
     <td> 只有 eventId日志项名称 </td>
-    <td>   </td>
+    <td> 此方式为非实时提交，可能会有丢失，建议仅作参考  </td>
   </tr>
-  
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.hasApk(pkgname,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 检测是否装有apk</td>
-    <td> pkgname为应用包名</td>
-    <td>   </td>
- </tr>
- 
+   
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.getAppInfo(packageList,function(message) {console.log(message); },function(error) { console.log(error);});</td>
+    <td bgcolor=#eeeeee> coocaaosapi.getAppInfo</td>
     <td> 获取app相关信息  </td>
     <td> 参数传递一个对象，key为"pkgList",value为应用包名的数组。即{pkgList:["com.tianci.user","com.tianci.movieplatform"]} </td>
     <td>   </td>
   </tr>
-  
-  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.getBaseInfo(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 获取基础信息(内存、存储空间等)</td>
-    <td></td>
-    <td></td>
- </tr>
- 
+   
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.setBusinessData(cc_type,cc_data,function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 设置Business相关信息  </td>
+    <td bgcolor=#eeeeee> coocaaosapi.setBusinessData</td>
+    <td> 设置Business相关信息【无回调】  </td>
     <td> cc_type区分同步、异步。默认为异步（async）,只有传sync时才会更改;cc_data为json形式的字符串 </td>
-    <td> 如 需要得到返回结果，采用getBusinessData</td>
+    <td> 如需要得到返回结果，采用getBusinessData</td>
   </tr>
   
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.getBusinessData(function(message) {console.log(message); },function(error) { console.log(error);}); </td>
-    <td> 获取Business相关信息</td>
+    <td bgcolor=#00FF00> coocaaosapi.getBusinessData</td>
+    <td> 获取Business相关信息【有回调】</td>
     <td>cc_type区分同步、异步。默认为异步（async）,只有传sync时才会更改;cc_data为json形式的字符串</td>
     <td></td>
  </tr>
  
- <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.setCoocaaUserLogout(function(message) {console.log(message); },function(error) { console.log(error);});</td>
-    <td> 退出用户登录状态  </td>
-    <td></td>
-    <td></td>
-  </tr>
-  
   <tr>
     <td bgcolor=#00FF00> coocaaosapi.startParamAction(pkname,version,activity,action,param,str,function(message) {console.log(message); },function(error) { console.log(error);}); </td>
     <td> 启动传参action页面</td>
