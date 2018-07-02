@@ -229,7 +229,7 @@
     <td>  跳转打开应用圈榜单页面 </td>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.startAppStoreSort </td>
+    <td bgcolor=#00FF00> coocaaosapi.startAppStoreSort</td>
     <td> id跳转应用圈分类	 </td>
     <td> sortid为输入/获取到的应用圈分类id  </td>
     <td> 跳转到该id对应的应用圈分类页面  </td>
@@ -350,38 +350,37 @@
     <th width="20%", bgcolor=yellow>结果/备注</th>
   </tr>
   <tr>
-    <td bgcolor=#00FF00> coocaaosapi.addPurchaseOrderListener(function(message) {}) </td>
+    <td bgcolor=#00FF00> coocaaosapi.addPurchaseOrderListener</td>
     <td> 支付状态监听	 </td>
     <td> </td>
     <td>   </td>
  </tr>
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.addUserChanggedListener(function(message) {}) </td>
+    <td bgcolor=#eeeeee> coocaaosapi.addUserChanggedListener</td>
     <td> 账户状态变更监听	  </td>
     <td>   </td>
     <td>   </td>
   </tr>
  
  <tr>
-    <td bgcolor=#00FF00> coocaaosapi.addUSBChangedListener(function(message) {}) </td>
+    <td bgcolor=#00FF00> coocaaosapi.addUSBChangedListener</td>
     <td> USB状态监听	 </td>
     <td> </td>
     <td>   </td>
  </tr>
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.addNetChangedListener(function(message) {}) </td>
+    <td bgcolor=#eeeeee> coocaaosapi.addNetChangedListener</td>
     <td> 网络状态变更监听	  </td>
     <td>   </td>
     <td>   </td>
   </tr><tr>
-    <td bgcolor=#00FF00> coocaaosapi.addAppTaskListener(function(message) {})</td>
+    <td bgcolor=#00FF00> coocaaosapi.addAppTaskListener</td>
     <td> APK下载监听	 </td>
     <td> </td>
     <td>   </td>
  </tr>
  <tr>
-    <td bgcolor=#eeeeee> coocaaosapi.addCommonListener(function(message){
-            console.log("commonListen=="+JSON.stringify(message));
+    <td bgcolor=#eeeeee> coocaaosapi.addCommonListener;
         }) </td>
     <td> 通用监听【新浏览器】	  </td>
     <td>   </td>
